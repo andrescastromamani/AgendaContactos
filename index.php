@@ -24,4 +24,65 @@
             </div>
         </form>
     </div>
+    <div class="bg-blanco contenedor sombra contactos">
+        <div class="contenedor-contactos">
+            <h2>Contactos</h2>
+            <input type="text" id="buscar" class="buscador sombra" placeholder="Buscar Contactos...">
+            <p class="total-contactos"><span>2</span>Contactos</p>
+            <div class="contenedor-tabla">
+                <table class="lista-contactos" id="lista-contactos">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Empresa</th>
+                            <th>Telefono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Andres</td>
+                            <td>acmsoft</td>
+                            <td>67425949</td>
+                            <td>
+                                <a class="btn btn-editar" href="">
+                                    <i class="fas fa-pen-square"></i>
+                                </a>
+                                <button class="btn btn-eliminar" type="button" data-id="1">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Andres</td>
+                            <td>acmsoft</td>
+                            <td>67425949</td>
+                            <td>
+                                <a class="btn btn-editar" href="">
+                                    <i class="fas fa-pen-square"></i>
+                                </a>
+                                <button class="btn btn-eliminar" type="button" data-id="1">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Andres</td>
+                            <td>acmsoft</td>
+                            <td>67425949</td>
+                            <td>
+                                <a class="btn btn-editar" href="">
+                                    <i class="fas fa-pen-square"></i>
+                                </a>
+                                <button class="btn btn-eliminar" type="button" data-id="1">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 <?php include('includes/layouts/footer.php');?>
