@@ -5,23 +5,7 @@
     <div class="bg-amarillo contenedor sombra">
         <form action="#" id="contacto">
             <legend>Añada Un Contacto <br><span>Todos los campos son obligatorios</span></legend>
-            <div class="campos">
-                <div class="campo">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" placeholder="Nombre Contacto">
-                </div>
-                <div class="campo">
-                    <label for="empresa">Empresa:</label>
-                    <input type="tel" id="empresa" placeholder="Nombre Empresa">
-                </div>
-                <div class="campo">
-                    <label for="telefono">Telefono:</label>
-                    <input type="tel" id="telefono" placeholder="Numero Telefono">
-                </div>
-            </div>
-            <div class="campo enviar">
-                <input type="submit" value="Añadir">
-            </div>
+            <?php include('includes/layouts/formulario.php');?>
         </form>
     </div>
     <div class="bg-blanco contenedor sombra contactos">
@@ -45,7 +29,7 @@
                             <td>acmsoft</td>
                             <td>67425949</td>
                             <td>
-                                <a class="btn btn-editar" href="">
+                                <a class="btn btn-editar" href="editar.php?id=1">
                                     <i class="fas fa-pen-square"></i>
                                 </a>
                                 <button class="btn btn-eliminar" type="button" data-id="1">
@@ -58,7 +42,7 @@
                             <td>acmsoft</td>
                             <td>67425949</td>
                             <td>
-                                <a class="btn btn-editar" href="">
+                                <a class="btn btn-editar" href="editar.php?id=1">
                                     <i class="fas fa-pen-square"></i>
                                 </a>
                                 <button class="btn btn-eliminar" type="button" data-id="1">
@@ -71,7 +55,7 @@
                             <td>acmsoft</td>
                             <td>67425949</td>
                             <td>
-                                <a class="btn btn-editar" href="">
+                                <a class="btn btn-editar" href="editar.php?id=1">
                                     <i class="fas fa-pen-square"></i>
                                 </a>
                                 <button class="btn btn-eliminar" type="button" data-id="1">
