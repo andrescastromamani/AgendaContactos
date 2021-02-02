@@ -125,6 +125,7 @@ legend span{
     background-color: var(--primario);
     color: white;
     border: none;
+    border-radius: 10px;
     padding: 1rem 4rem;
     text-transform: uppercase;
     transition: background-color .5s ease-in-out;
@@ -199,4 +200,27 @@ legend span{
 .lista-contactos button{
     background-color: transparent!important;
     border: none;
+}
+
+/*Notificaiones*/
+.notificacion{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem 3rem;
+    color: white;
+    opacity: 0;
+    transition: opasity .5s ease-in-out;
+}
+.visible{
+    opacity: 1;
+}
+/*Colores del Background de la notificacion*/
+.correcto{
+    background-color: rgb(red, green, blue);
+    color: green;
+}
+.error{
+    background-color: #ff6262;
+    color: rgb(255, 255, 255);
 }
