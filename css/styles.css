@@ -1,0 +1,58 @@
+/*Custom property*/
+:root{
+    --primario: #202020;
+    --secundario: #ffc107;
+    --primarioOscuro: #000000;
+    --fuentePrimario: 'Arial',helvetica,sans-serif;
+    --fuenteSecundario:'Poppins', sans-serif;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+    background-color: var(--primario);
+    font-family: var(--fuentePrimario);
+}
+.contenedor{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.bg-amarillo{
+    background-color: var(--secundario);
+}
+.sombra{
+    box-shadow: 0px 6px 20px 0px rgba(255,255,255,0.7);
+    -webkit-box-shadow: 0px 6px 20px 0px rgba(255,255,255,0.7);
+    -moz-box-shadow: 0px 6px 20px 0px rgba(255,255,255,0.7);
+}
+h1, h2{
+    font-family: var(--fuenteSecundario);
+    text-align: center;
+    margin: 0;
+}
+h1{
+   color: white;
+   padding: 20px;
+}
+.contenedor-barra{
+    background-color: var(--primarioOscuro);
+}
+/*Formulario*/
+form{
+    padding: 3rem;
+    margin-top: 20px;
+}
+form legend{
+    font-family: var(--fuenteSecundario);
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+}
+legend span{
+    font-size: 1rem;
+    margin-top: 1rem;
+}
