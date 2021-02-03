@@ -3,7 +3,7 @@
         <h1>Agenda de Contactos</h1>
     </div>
     <div class="bg-amarillo contenedor sombra">
-        <form action="#" id="contacto">
+        <form action="#" id="contacto" method="POST">
             <legend>Añada Un Contacto <br><span>Todos los campos son obligatorios</span></legend>
             <?php include('includes/layouts/formulario.php');?>
         </form>
