@@ -8,6 +8,6 @@
 
     $conn = new mysqli(DB_HOST,DB_USUARIO,DB_PASSWORD,DB_NOMBRE,DB_PUERTO);
 
-    echo $conn->ping();
+    //echo $conn->ping();
 
 ?>
