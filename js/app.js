@@ -4,6 +4,7 @@ const formularioContactos = document.querySelector('#contacto'),
 function eventLinteners(){
     //cuando el formulario de editar o crear se ejecuta
     formularioContactos.addEventListener('submit',leerFormulario);
+    listadoContactos.addEventListener('click',eliminarContacto);
 }
 
 function leerFormulario(e){
@@ -96,6 +97,8 @@ function insertarBD(datos){
     //enviar los datos
     xhr.send(datos);
 }
+
+//MOstrar la Notificacion
 function mostrarNotificacion(mensaje,clase){
     const notificacion = document.createElement('div');
     notificacion.classList.add(clase, 'notificacion','sombra');//agregamos la clase al div
