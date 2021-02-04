@@ -4,6 +4,7 @@ const formularioContactos = document.querySelector('#contacto'),
 function eventLinteners(){
     //cuando el formulario de editar o crear se ejecuta
     formularioContactos.addEventListener('submit',leerFormulario);
+    //listener para eliminar
     listadoContactos.addEventListener('click',eliminarContacto);
 }
 
@@ -48,7 +49,7 @@ function insertarBD(datos){
     //pasar los datos 
     xhr.onload = function(){
         if(this.status === 200){
-            console.log(JSON.parse(xhr.responseText));
+            //console.log(JSON.parse(xhr.responseText));
             const respuesta = JSON.parse(xhr.responseText);
             //insertar un nuevo elemento en la Tabla
             const nuevoContacto = document.createElement('tr');
@@ -98,6 +99,30 @@ function insertarBD(datos){
     xhr.send(datos);
 }
 
+//eliminar coctantos
+function eliminarContacto(e){
+    if (e.target.parentElement.classList.contains('btn-eliminar')) {
+        const id = e.target.parentElement.getAttribute('data-id');
+        //console.log(id);
+        const respuesta = confirm('estas seguro?');
+        if (respuesta) {
+            //ajax
+            //crear el objeto
+            const xhr = new XMLHttpRequest();
+            //abrir la conexion
+            xhr.open('GET',`includes/modelos/eliminarContactos.php?id=${id}&accion=eliminar`,true);
+            //leer la respuesta
+            xhr.onload = function(){
+                if (this.status === 200) {
+                    const resultado = JSON.parse(xhr.responseText);
+                    console.log(resultado);
+                }
+            }
+            //enviar
+            xhr.send();
+        }
+    }
+}
 //MOstrar la Notificacion
 function mostrarNotificacion(mensaje,clase){
     const notificacion = document.createElement('div');

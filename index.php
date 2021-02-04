@@ -6,7 +6,7 @@
         <h1>Agenda de Contactos</h1>
     </div>
     <div class="bg-amarillo contenedor sombra">
-        <form action="#" id="contacto" method="POST">
+        <form action="#" id="contacto">
             <legend>Añada Un Contacto <br><span>Todos los campos son obligatorios</span></legend>
             <?php include('includes/layouts/formulario.php');?>
         </form>
@@ -32,21 +32,20 @@
                         if($contactos->num_rows){ 
                             foreach ($contactos as $contacto) {?>
                                 <tr>
-                                    <td><?php echo $contacto['nombre'];?></td>
-                                    <td><?php echo $contacto['empresa'];?></td>
-                                    <td><?php echo $contacto['telefono'];?></td>
+                                    <td><?php echo $contacto['nombre']; ?></td>
+                                    <td><?php echo $contacto['empresa']; ?></td>
+                                    <td><?php echo $contacto['telefono']; ?></td>
                                     <td>
-                                        <a class="btn btn-editar" href="editar.php?id=<?php echo $contacto['id'];?>">
+                                        <a class="btn btn-editar" href="editar.php?id=<?php echo $contacto['id']; ?>">
                                             <i class="fas fa-pen-square"></i>
                                         </a>
-                                        <button class="btn btn-eliminar" type="button" data-id="<?php echo $contacto['id'];?>">
+                                        <button data-id="<?php echo $contacto['id']; ?>" class="btn btn-eliminar" type="button">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </td>
                                 </tr>
-                    <?php
-                        }
-                        }?>
+                            <?php }
+                    } ?>
                     </tbody>
                 </table>
             </div>
