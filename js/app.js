@@ -116,6 +116,16 @@ function eliminarContacto(e){
                 if (this.status === 200) {
                     const resultado = JSON.parse(xhr.responseText);
                     console.log(resultado);
+                    if (resultado.respuesta == 'correcto') {
+                        //eliminar del DOM
+                        console.log(e.target.parentElement.parentElement.parentElement);
+                        e.target.parentElement.parentElement.parentElement.remove();
+                        //Mostrar mensaje
+                        mostrarNotificacion('Se Elimino correctamente','correcto')
+                    }else{
+                        //mostrar mensaje
+                        mostrarNotificacion('Hubo un error!!','error');
+                    }
                 }
             }
             //enviar
