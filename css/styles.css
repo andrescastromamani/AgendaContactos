@@ -219,8 +219,8 @@ legend span{
 }
 /*Colores del Background de la notificacion*/
 .correcto{
-    background-color: rgb(56, 180, 56);
-    color: rgb(0, 0, 0);
+    background-color: rgb(136, 241, 136);
+    color: green
 }
 .error{
     background-color: #ff6262;

@@ -1,6 +1,6 @@
 <?php 
-    include('includes/layouts/header.php');
-    include('includes/funciones/funciones.php');
+    include 'includes/layouts/header.php';
+    include 'includes/funciones/funciones.php';
 ?>
     <div class="contenedor-barra">
         <h1>Agenda de Contactos</h1>
@@ -8,7 +8,28 @@
     <div class="bg-amarillo contenedor sombra">
         <form action="#" id="contacto">
             <legend>Añada Un Contacto <br><span>Todos los campos son obligatorios</span></legend>
-            <?php include('includes/layouts/formulario.php');?>
+            <div class="campos">
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input 
+                    type="text"
+                    placeholder="Nombre Contacto" 
+                    id="nombre"  
+                    value="">
+            </div>
+            <div class="campo">
+                <label for="empresa">Empresa:</label>
+                <input type="text" placeholder="Nombre Empresa"  id="empresa" value="">
+            </div>
+            <div class="campo">
+                <label for="telefono">Telefono:</label>
+                <input type="tel" placeholder="Numero Telefono" id="telefono"  value="">
+            </div>
+        </div>
+        <div class="campo enviar">
+            <input type="hidden" id="accion" value="crear">
+            <input type="submit" value="Añadir">
+        </div>
         </form>
     </div>
     <div class="bg-blanco contenedor sombra contactos">
@@ -51,4 +72,4 @@
             </div>
         </div>
     </div>
-<?php include('includes/layouts/footer.php');?>
+<?php include 'includes/layouts/footer.php';?>
