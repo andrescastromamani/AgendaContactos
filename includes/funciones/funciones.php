@@ -12,7 +12,7 @@
     function obtenerContacto($id){
         include('bdconexion.php');
         try {
-            return $conn->query("SELECT * FROM contactos WHERE id='$id'");
+            return $conn->query("SELECT * FROM contactos WHERE id=$id");
         } catch (Exception $e) {
             echo "Error!!".$e->getMessage()."<br>";
         }

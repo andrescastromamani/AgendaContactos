@@ -46,6 +46,7 @@
                 $accion = $contacto['empresa'] ? 'editar':'crear';
             ?>
             <input type="hidden" id="accion" value="<?php echo $accion?>">
+            <input type="hidden" id="id" value="<?php echo $id?>">
             <input type="submit" value="<?php echo $textoBtn?>">
         </div>
         </form>
