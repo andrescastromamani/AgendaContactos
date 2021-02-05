@@ -1,5 +1,6 @@
 const formularioContactos = document.querySelector('#contacto'),
-      listadoContactos = document.querySelector('#lista-contactos tbody');
+      listadoContactos = document.querySelector('#lista-contactos tbody'),
+      inputBuscador = document.querySelector('#buscar');
  eventLinteners();
 function eventLinteners(){
     //cuando el formulario de editar o crear se ejecuta
@@ -8,6 +9,7 @@ function eventLinteners(){
     if (listadoContactos) {
         listadoContactos.addEventListener('click',eliminarContacto);   
     }
+    inputBuscador.addEventListener('input',buscarContactos);
 }
 
 function leerFormulario(e){
@@ -182,4 +184,17 @@ function mostrarNotificacion(mensaje,clase){
             }, 500);
         }, 3000);
     }, 100);
+}
+
+//Buscar contactos
+function buscarContactos(e){
+    //console.log(e.target.value)
+    const expresion = new RegExp(e.target.value, "i");//i es para ignorar mayusculas y minusculas
+    const registros = document.querySelectorAll('tbody tr');
+    registros.forEach(registro =>{
+        registro.style.display = 'none';
+        if (registro.childNodes[1].textContent.replace(/\s/g," ").search(expresion) != -1) {
+            registro.style.display = 'table-row';
+        }
+    })
 }
